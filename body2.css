@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+html {
+width : 1500px ;
+height : 900px ;
+}
+
+
+/* --- --- 상단 설명 --- --- */
+div.head {
+	padding : 10px 10px 10px 10px ;
+	margin-left : 3%
+}
+h1.head {
+	display : inline-block ;
+	margin-left : 3% ;
+}
+
+span.head {
+	margin-left : 10% ;
+}
+
+/* --- --- 테이블 --- --- */
+
+div.body {
+	float : none ;
+	margin-left : 4% ;
+	margin-top : 1% ;
+	width: 1000px;
+	border : 1px solid #acacac ;
+}
+table {
+	width : 100% ;
+	text-align : center ;
+	border-spacing : 10px ;
+}
+
+th {
+	width : 160px ;
+	height : 30px ;
+	border: 1px solid #acacac ;
+	background-color : #dedede;
+}
+
+td {
+	border: 1px solid #acacac;
+}
+
+/* --- --- 목록으로 버튼 --- --- */
+
+div.back {
+	margin-left : 5% ;
+	margin-top : 3% ;
+}
+a.back {
+	text-decoration : none ;
+}
+span.back {
+	background-color : #e2e2e2;
+	border-radius : 5px ;
+	border : 1px solid #acacac ;
+	padding : 5px ;
+	color: black ; 
+}

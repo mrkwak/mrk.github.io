@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet"  href="css/body.css">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+	<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script> 
+
+
+
+	<script type="text/javascript">
+		$(function() {
+			$( "#fromDate" ).datepicker({
+				changeMonth: true,
+				changeYear : true,
+				nextText: '다음 달',
+				prevText: '이전 달',
+				dateFormat: 'yy.mm.dd',
+				maxDate: 0,
+			});
+		});
+		$(function() {
+			$( "#toDate" ).datepicker({
+				changeMonth: true,
+				changeYear : true,
+				nextText: '다음 달',
+				prevText: '이전 달',
+				dateFormat: 'yy.mm.dd',
+				maxDate: 0,
+			});
+		});		
+
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		
+		<div class="head"> <!-- ------------------------------------------------------------ 상단 설명 줄 -->
+			<h1 class="head">가상 계좌 입금 내역</h1>
+			<span class = "head">가상 계좌 입금 내역을 확인 하실 수 있습니다.</span>
+		
+		<div class="searchbox"><!-- ------------------------------------------------------------ 검색 설정 조건 입력 창 -->
+			<div class="date">
+				<span class="searchbox">거래일자</span>
+				<input type="text" id="fromDate" class="dateopt" placeholder="날짜 선택" maxlength="8" />
+				<input type="time" name="time" class="timepicker" id="time">
+				<span class="wave"> ~ </span>
+				<input type="text" id="toDate" class="dateopt" placeholder="날짜 선택" maxlength="8" />
+				<input type="time" name="time" class="timepicker" id="time2">
+			</div>
+			<div class="bankaccount">
+				<span class="searchbox">거래은행</span>
+				<select class="select1" id=""> 
+					<option value=""> 전체 </option>
+				</select>
+				<span class="name">거래계좌</span>
+				<input type="text" maxlength="20" placeholder="계좌 입력" class="input1"/>
+			</div>
+
+			<div class="statsname">
+				<span class="searchbox">거래상태</span>
+				<select class="select1" id="">
+					<option value=""> 전체 </option>
+				</select>
+				<span class="name">입금자명</span>
+				<input type="text" maxlength="10" placeholder="입금자명 입력" class="input1" />
+			</div>
+		</div>
+		
+		<div class="btns">
+			<button class="search"> 검색 </button>
+			<button class="excel" > 엑셀 </button>
+		</div>
+		</div>
+		
+		<div class="table"> <!-- 테이블 ------------->
+			<table id="table">
+				<thead>
+					<tr>
+						<th>순번</th>
+						<th>일자</th>
+						<th>시간</th>
+						<th>은행</th>
+						<th>계좌</th>
+						<th>금액</th>
+						<th>상태</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td> 0 </td>
+						<td> 0 </td>
+						<td> 0 </td>
+						<td> 0 </td>
+						<td> 0 </td>
+						<td> 0 </td>
+						<td> 0 </td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</body>
+</html>
